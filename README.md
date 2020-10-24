@@ -10,11 +10,11 @@ Datasets for fragment-based retrosynthesis planning
 ---- 
 Example entry from Doubles.txt:
 
-> Ux bx M Sx G W U C Y lx tx Nx hx B nx ux Ex O I T c w n r l h i o a t e 	az Y Nx B nx Ex T c n r l h i o a t e - M C lx tx hx I c w t e 
+**Tz Px rx dx E D L p b y v r h i o a t e**     *dx D L v r o a t e - Tz p y i o a e*
 
 # brief explanation of dataset curation
 
-1. We used the USPTO dataset recently mined by Lowe<sup>*</sup>. It contains 1,002,970 single product atom-mapped reactions. For the sake of simplicity, we restricted ourselves to single product reactions in this work. If it is considered that Lowe's dataset consists of 1,088,170 reactions in total with no duplicates, it is understood that limiting ourselves to single product reactions are not a preference but an obligation.
+1. We used the USPTO dataset recently mined by Lowe[^1]. It contains 1,002,970 single product atom-mapped reactions. For the sake of simplicity, we restricted ourselves to single product reactions in this work. If it is considered that Lowe's dataset consists of 1,088,170 reactions in total with no duplicates, it is understood that limiting ourselves to single product reactions are not a preference but an obligation.
  - Number of reactions to start with : 1,002,970.
 2. We removed the reactions if the number of molecules at reactant side is greater than or equal to three.
  - The size of the dataset at this stage : 922,823.
@@ -31,5 +31,4 @@ We first set a maximum total length for a reaction as 100, and reduce the size o
 6. For NMT applications, injection property is something desirable. In cases where a product maps into different reactants at different reactions, it is better having an injection from product domain to reactant domain.  Therefore, we identified all such cases and applied a recipe to select only one of those reactions. We rioritized two reactants over a single reactant, and selected the one with minimum total lenght.
  - The size of the dataset at this stage : 352,546 (namely **Mixed.txt** dataset which contains single and double reactant reactions)
  
-
-<sup>*</sup>Lowe, D.M.: Extraction of chemical structures and reactions from theliterature. PhD thesis, University of Cambridge (2012).
+[^1]: Lowe, D.M.: Extraction of chemical structures and reactions from theliterature. PhD thesis, University of Cambridge (2012).
