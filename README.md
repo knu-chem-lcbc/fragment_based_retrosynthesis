@@ -1,5 +1,5 @@
 # fragment_based_retrosynthesis
-Program and data for fragment-based retrosynthesis planning
+Datasets for fragment-based retrosynthesis planning
 
 1. Singles.txt
  - Single reactant reactions
@@ -8,6 +8,28 @@ Program and data for fragment-based retrosynthesis planning
 3. Mixed.txt
  - Mixed cases
 ---- 
-Examples:
+Example entry from Doubles.txt:
 
-> yz fz mz uz cz rz hz Mx Lx ox Fx fx P Vx C ix E lx tx Wx hx ux ax O I f u w r h s t 	yz fz mz uz cz rz hz Mx Lx ox P Vx ix Wx hx ux f u w h s t - Yx Sx fx C hx ax Ex I u w r t 
+> Ux bx M Sx G W U C Y lx tx Nx hx B nx ux Ex O I T c w n r l h i o a t e 	az Y Nx B nx Ex T c n r l h i o a t e - M C lx tx hx I c w t e 
+
+# brief explanation of dataset curation
+
+1. We used the USPTO dataset recently mined by Lowe<sup>*</sup>. It contains 1,002,970 single product atom-mapped reactions. For the sake of simplicity, we restricted ourselves to single product reactions in this work. If it is considered that Lowe's dataset consists of 1,088,170 reactions in total with no duplicates, it is understood that limiting ourselves to single product reactions are not a preference but an obligation.
+ - Number of reactions to start with : 1,002,970.
+2. We removed the reactions if the number of molecules at reactant side is greater than or equal to three.
+ - The size of the dataset at this stage : 922,823.
+3. We also removed the duplicated reactions generated due to new representation.
+ - The size of the dataset at this stage : 786,219.
+4. We cleaned internal twins, where product and reactant are identical on unimolecular reactions.
+ - The size of the dataset at this stage : 780,471.
+
+In this stage of the corpus; we have 186,206 unimolecular reactions, and 594,265 reactions where reactant side is composed of two molecules.
+
+5. We then examined the distribution of the reactions w.r.t total length of product and reaction pairs. For instance, The following reaction : *[ C ix Wx I f u w o a e >> C I u w o a e - C ix Wx I f u w o a e ]* has total length 27.
+We first set a maximum total length for a reaction as 100, and reduce the size of the dataset accordingly.
+ - The size of the dataset at this stage : 429,889.
+6. For NMT applications, injection property is something desirable. In cases where a product maps into different reactants at different reactions, it is better having an injection from product domain to reactant domain.  Therefore, we identified all such cases and applied a recipe to select only one of those reactions. We rioritized two reactants over a single reactant, and selected the one with minimum total lenght.
+ - The size of the dataset at this stage : 352,546 (namely **Mixed.txt** dataset which contains single and double reactant reactions)
+ 
+
+<sup>*</sup>Lowe, D.M.: Extraction of chemical structures and reactions from theliterature. PhD thesis, University of Cambridge (2012).
