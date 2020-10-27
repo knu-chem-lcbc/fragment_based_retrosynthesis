@@ -1,4 +1,4 @@
-# fragment_based_retrosynthesis
+## fragment_based_retrosynthesis
 
 Datasets for fragment-based retrosynthesis planning
 1. PD1_RD1.txt.bz2	
@@ -14,7 +14,7 @@ Example entry from PD2_RD2.txt:
 
 ---- 
 
-# brief explanation of dataset curation
+## brief explanation of dataset curation
 
 1. We used the USPTO dataset recently mined by Lowe[^1]. It contains 1,002,970 single product atom-mapped reactions. For the sake of simplicity, we restricted ourselves to single product reactions in this work. If it is considered that Lowe's dataset consists of 1,088,170 reactions in total with no duplicates, it is understood that limiting ourselves to single product reactions are not a preference but an obligation.
  - Number of reactions to start with : 1,002,970.
