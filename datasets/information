@@ -1,6 +1,0 @@
-Below variables in nmt-main.py will change based on the dataset used.
-
-input_lang_name = 'PD2'
-output_lang_name = 'RD2'
-dataset = 'bi'
-raw_data_file_path = ('PD2_RD2.txt',)
