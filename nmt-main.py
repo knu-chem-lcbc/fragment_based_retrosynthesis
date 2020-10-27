@@ -74,7 +74,7 @@ epochs = 40
 learning_rate= 8
 
 #lr_schedule = {5:2, 10:5, 20:5, 40:2 }
-lr_schedule = {4:2, 8:2, 12:2, 20:2}
+lr_schedule = {4:1.17, 8:1.17, 12:1.17, 20:1.17, 24:1.17, 28:1.17, 32:1.17, 36:1.17}
 
 criterion = nn.NLLLoss()
 
@@ -537,7 +537,6 @@ def similarity(truth, prediction):
 
     else:
         Sdict['Prediction'] = 0
-
 
     return Sdict
 
