@@ -1,0 +1,11 @@
+Start with an input file as;
+  index       smiles
+  1           CC(=O)OC(CC(=O)[O-])C[N+](C)(C)C
+  2           CC(=O)OC(CC(=O)O)C[N+](C)(C)C
+  3           C1=CC(C(C(=C1)C(=O)O)O)O
+      ...
+
+Then, use the following scripts to generate an input for the model.
+1.  convert_maccs.py
+2.  key-reductions.py
+3.  replacement.py
