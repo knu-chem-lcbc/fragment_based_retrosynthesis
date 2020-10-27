@@ -1,16 +1,15 @@
 # fragment_based_retrosynthesis
 Datasets for fragment-based retrosynthesis planning
-
 1. PD1_RD1.txt.bz2	
  - Single reactant reactions
 2. PD2_RD2.txt.bz2	
  - Double reactant reactions
 3. PC6_RC6.txt.bz2
  - Mixed cases
----- 
-Example entry from PD2_RD2.txt:
 
+Example entry from PD2_RD2.txt:
 **Tz Px rx dx E D L p b y v r h i o a t e**     *dx D L v r o a t e - Tz p y i o a e*
+---- 
 
 # brief explanation of dataset curation
 
