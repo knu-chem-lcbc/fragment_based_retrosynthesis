@@ -31,6 +31,6 @@ In this stage of the corpus; we have 186,206 unimolecular reactions, and 594,265
 We first set a maximum total length for a reaction as 100, and reduce the size of the dataset accordingly.
  - The size of the dataset at this stage : 429,889.
 6. For NMT applications, injection property is something desirable. In cases where a product maps into different reactants at different reactions, it is better having an injection from product domain to reactant domain.  Therefore, we identified all such cases and applied a recipe to select only one of those reactions. We rioritized two reactants over a single reactant, and selected the one with minimum total lenght.
- - The size of the dataset at this stage : 352,546 (namely **Mixed.txt** dataset which contains single and double reactant reactions)
+ - The size of the dataset at this stage : 352,546 (namely **PC6_RC6.txt** dataset which contains single and double reactant reactions)
  
 [^1]: Lowe, D.M.: Extraction of chemical structures and reactions from theliterature. PhD thesis, University of Cambridge (2012).
