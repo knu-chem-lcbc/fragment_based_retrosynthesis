@@ -34,3 +34,6 @@ We first set a maximum total length for a reaction as 100, and reduce the size o
  - The size of the dataset at this stage : 352,546 (namely **PC6_RC6.txt** dataset which contains single and double reactant reactions)
  
 [^1]: Lowe, D.M.: Extraction of chemical structures and reactions from theliterature. PhD thesis, University of Cambridge (2012).
+
+## License
+Fragment-based retrosynthesis scheme by Juyong Lee and Umit Ucak is licensed under Attribution-NonCommercial-ShareAlike 4.0 International. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0
